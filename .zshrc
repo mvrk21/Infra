@@ -121,27 +121,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Define a function to use fzf for file search
-fzf-find-file() {
-  # Use fzf to select a file and insert it into the buffer
-  # <"${TTY}" is used for a silent widget (clean history)
-  local selected=$(fzf <"${TTY}")
-  if [[ -n "$selected" ]]; then
-    # Replace the current buffer content with the selected file
-    BUFFER="$selected"
-    # Move the cursor to the end of the line
-    CURSOR=$#BUFFER
-  fi
-  # Reset the prompt to ensure correct display
-  zle reset-prompt
-}
-
-# Create a ZLE widget for the function
-zle -N fzf-find-file
-
-# Bind Control+f (^F) to the new widget
-# Use bindkey -M emacs for the default Zsh keymap
-bindkey -M emacs '^F' fzf-find-file
+bindkey -s ^f "tmux-sessionizer\n"
 
 # If you use vi-mode, also bind it for insert and command modes
 # bindkey -M viins '^F' fzf-find-file
