@@ -5,21 +5,6 @@
 #   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 # fi
 
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-export PATH=$PATH:$HOME/.local/share/nvim/mason/bin
-export PATH="/usr/local/netcoredbg/bin:$PATH"
-export PATH="$PATH:$HOME/Documents/SQLiteStudio/sqlitestudio"
-export PATH=$PATH:/usr/local/go/bin
-
-export CORE_CUST_ID="DSX100-1"
-export CORE_CUST_INSTANCE="DSX100-1-1"
-export DOTNET_ENVIRONMENT=Development
-export ASPNETCORE_URLS="http://localhost:8080"
-
-export mqtt_secret="DSXxsd@123"
-export smtp_secret="yhrtjgfqybwnkvxj"
-
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
